@@ -9,8 +9,8 @@ from app.resources.receita.certidao import CertidaoCNPJ, CertidaoCPF
 app = Flask(__name__)
 api = Api(app)
 
-api.add_resource(ClientCNPJ, '/consulta/cnpj/<string:cnpj>/token/<string:token>')
-api.add_resource(ClientCPF, '/consulta/cpf/<string:cpf>/<string:nascimento>/token/<string:token>')
+api.add_resource(ClientCNPJ, '/consulta/cnpj/<string:cnpj>')
+api.add_resource(ClientCPF, '/consulta/cpf/<string:cpf>/<string:nascimento>')
 api.add_resource(ClientPFNome, '/consulta/nome/<string:nome>')
 api.add_resource(ClientPFDocument, '/consulta/nome/<string:nome>/cpf/<string:document>')
 api.add_resource(CertidaoCPF, '/consultaCertidao/cpf/<string:cpf>')
